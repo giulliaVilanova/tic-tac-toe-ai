@@ -42,7 +42,25 @@ def isBoardFull(board):
     pass
 
 def main():
-    pass
+    print("Jogo da Velha")
+    printBoard()
 
+    while not(isBoardFull(board)):
+        if not (isWinner(board, 'O')):
+            playerMove()
+            printBoard()
+        else:
+            print("O computador venceu!")
+            break
+
+        if not (isWinner(board, 'X')):
+            compMove()
+            printBoard()
+        else:
+            print("Você venceu!")
+            break
+
+    if isBoardFull(board):
+        print("Empate!")
 main()
 printBoard(board)
