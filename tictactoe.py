@@ -39,7 +39,10 @@ def selectRandom(board):
     pass
 
 def isBoardFull(board):
-    pass
+    if board.count(' ') > 1:
+        return True
+    else:
+        return False
 
 def main():
     print("Jogo da Velha")
