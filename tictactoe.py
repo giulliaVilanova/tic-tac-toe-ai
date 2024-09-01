@@ -30,7 +30,21 @@ def isWinner(bo, le):
             (bo[3] == le and bo[5] == le and bo[7] == le))
 
 def playerMove():
-    pass
+    run = True
+    while run:
+        move = input("Selecione uma posição para jogar (1-9): ")
+        try:
+            move = int(move)
+            if move > 0 or move < 10:
+                if spaceIsFree(move):
+                    run = False
+                    insertLetter('X', move)
+                else:
+                    print("Este espaço já está sendo ocupado!")
+            else:
+                print("Por favor digite um número entre 1 e 9!")
+        except:
+            print("Por favor, digite um número!")
 
 def compMove():
     pass
