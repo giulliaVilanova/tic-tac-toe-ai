@@ -148,5 +148,4 @@ def main():
     if isBoardFull(board):
         print("Empate!")
 
-
 main()
